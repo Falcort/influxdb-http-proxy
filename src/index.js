@@ -12,8 +12,8 @@ const port = 3000
 const errors = new Map();
 const ok = new Map();
 const transporter = nodemailer.createTransport({
-    host: "thibaultsouquet-fr.mail.protection.outlook.com",
-    port: 25,
+    host: process.env.SMTP_ADDRESS,
+    port: process.env.SMTP_PORT,
     requireTLS: true,
     secure: false,
 });
